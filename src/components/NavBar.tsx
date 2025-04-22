@@ -7,9 +7,9 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <nav className="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-200">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link to="/" className="font-crimson text-5xl md:text-7xl">
+        <Link to="/" className="font-crimson text-4xl md:text-5xl">
           LENRUBO
         </Link>
         
@@ -25,21 +25,21 @@ const NavBar = () => {
         <div className="hidden md:flex items-center gap-6">
           <Link
             to="/products"
-            className="font-mono text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="font-mono text-sm uppercase px-4 py-2 hover:bg-gray-100 transition-colors"
           >
-            OUR PRODUCTS
+            Our Products
           </Link>
           <Link
             to="/blog"
-            className="font-mono text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="font-mono text-sm uppercase px-4 py-2 hover:bg-gray-100 transition-colors"
           >
-            BLOG
+            Blog
           </Link>
           <Link
             to="/about"
-            className="font-mono text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="font-mono text-sm uppercase px-4 py-2 hover:bg-gray-100 transition-colors"
           >
-            ABOUT US
+            About Us
           </Link>
         </div>
         
@@ -49,24 +49,24 @@ const NavBar = () => {
             <div className="flex flex-col items-center gap-4">
               <Link
                 to="/products"
-                className="w-full font-mono text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 transition-colors text-center"
+                className="w-full font-mono text-sm uppercase px-4 py-2 hover:bg-gray-100 transition-colors text-center"
                 onClick={() => setMenuOpen(false)}
               >
-                OUR PRODUCTS
+                Our Products
               </Link>
               <Link
                 to="/blog"
-                className="w-full font-mono text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 transition-colors text-center"
+                className="w-full font-mono text-sm uppercase px-4 py-2 hover:bg-gray-100 transition-colors text-center"
                 onClick={() => setMenuOpen(false)}
               >
-                BLOG
+                Blog
               </Link>
               <Link
                 to="/about"
-                className="w-full font-mono text-sm px-4 py-2 bg-gray-100 hover:bg-gray-200 transition-colors text-center"
+                className="w-full font-mono text-sm uppercase px-4 py-2 hover:bg-gray-100 transition-colors text-center"
                 onClick={() => setMenuOpen(false)}
               >
-                ABOUT US
+                About Us
               </Link>
             </div>
           </div>
