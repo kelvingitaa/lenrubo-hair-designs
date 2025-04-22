@@ -1,15 +1,10 @@
 
-import type { Config } from "tailwindcss";
+import { type Config } from "tailwindcss";
+import { fontFamily } from "tailwindcss/defaultTheme";
 
 export default {
   darkMode: ["class"],
-  content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
-  ],
-  prefix: "",
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
       center: true,
@@ -20,6 +15,7 @@ export default {
     },
     extend: {
       fontFamily: {
+        sans: ["Inter var", ...fontFamily.sans],
         crimson: ["Crimson Text", "serif"],
         mono: ["IBM Plex Mono", "monospace"],
         instrument: ["Instrument Serif", "serif"],
@@ -59,9 +55,39 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        sidebar: {
+          DEFAULT: "hsl(var(--sidebar-background))",
+          foreground: "hsl(var(--sidebar-foreground))",
+          primary: {
+            DEFAULT: "hsl(var(--sidebar-primary))",
+            foreground: "hsl(var(--sidebar-primary-foreground))",
+          },
+          accent: {
+            DEFAULT: "hsl(var(--sidebar-accent))",
+            foreground: "hsl(var(--sidebar-accent-foreground))",
+          },
+          border: "hsl(var(--sidebar-border))",
+          ring: "hsl(var(--sidebar-ring))",
+        },
       },
-      backgroundImage: {
-        'gradient-text': 'linear-gradient(90deg, #FDFDFD 34.62%, #979797 76.44%)',
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
