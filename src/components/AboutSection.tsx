@@ -9,18 +9,18 @@ const AboutSection = () => (
           About Lenrubo
         </h2>
         <p className="font-mono text-lg mb-4">
-          At Lenrubo, we’re dedicated to sourcing and delivering premium Vietnamese hair that celebrates every woman’s unique beauty. 
+          At Lenrubo, we're dedicated to sourcing and delivering premium Vietnamese hair that celebrates every woman's unique beauty. 
           Our hair bundles are ethically collected, naturally textures, and designed to empower confidence and style—every day.
         </p>
         <p className="font-mono text-lg">
           Our mission is simple yet powerful: <span className="font-bold">to provide luxury you can trust, beauty you can wear, and a standard you deserve.</span>
         </p>
       </div>
-      <div className="w-full md:w-1/2">
+      <div className="w-full md:w-1/2 rounded-2xl overflow-hidden">
         <img
           src="/lovable-uploads/photo-1721322800607-8c38375eef04"
-          alt="About Us mockup"
-          className="rounded-2xl shadow-xl w-full object-cover max-h-[400px]"
+          alt="About Us"
+          className="w-full object-cover h-[400px]"
         />
       </div>
     </div>

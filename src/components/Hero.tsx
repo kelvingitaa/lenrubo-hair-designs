@@ -19,11 +19,11 @@ const Hero = () => {
             </Button>
           </Link>
         </div>
-        <div className="relative h-[300px] md:h-[600px]">
+        <div className="relative h-[300px] md:h-[600px] rounded-lg overflow-hidden">
           <img 
             src="/lovable-uploads/1cc92f4e-dd5e-44aa-9122-6a95406830b3.png" 
             alt="Luxury Vietnamese Hair" 
-            className="absolute inset-0 w-full h-full object-cover rounded-lg"
+            className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
       </div>

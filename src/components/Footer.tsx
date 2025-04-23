@@ -6,11 +6,13 @@ const Footer = () => (
   <footer className="bg-gray-100 py-10 px-4 mt-6">
     <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <div className="flex items-center gap-3">
-        <img
-          src="/lovable-uploads/photo-1487252665478-49b61b47f302"
-          alt="Footer fun"
-          className="w-12 h-12 rounded-full object-cover"
-        />
+        <div className="w-12 h-12 rounded-full overflow-hidden">
+          <img
+            src="/lovable-uploads/photo-1487252665478-49b61b47f302"
+            alt="Footer logo"
+            className="w-full h-full object-cover"
+          />
+        </div>
         <span className="font-crimson text-2xl">LENRUBO</span>
       </div>
       <div className="flex gap-5">
