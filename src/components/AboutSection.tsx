@@ -8,19 +8,18 @@ const AboutSection = () => (
         <h2 className="font-instrument text-4xl md:text-6xl mb-4">
           About Lenrubo
         </h2>
-        <p className="font-mono text-lg mb-4">
-          At Lenrubo, we're dedicated to sourcing and delivering premium Vietnamese hair that celebrates every woman's unique beauty. 
-          Our hair bundles are ethically collected, naturally textures, and designed to empower confidence and style—every day.
+        <p className="font-mono text-lg mb-4 text-gray-800">
+          Lenrubo is dedicated to sourcing and delivering <span className="font-semibold text-primary">premium Vietnamese hair</span> that celebrates every woman’s unique beauty. Our hair bundles are ethically collected, naturally textured (never processed!), and designed to empower confidence and elevate your style—every day.
         </p>
-        <p className="font-mono text-lg">
-          Our mission is simple yet powerful: <span className="font-bold">to provide luxury you can trust, beauty you can wear, and a standard you deserve.</span>
+        <p className="font-mono text-lg text-gray-700">
+          <b>Our mission:</b> To provide <span className="font-bold text-black">luxury you can trust, beauty you can wear, and the high standards you deserve</span>. Experience the difference—because you are worth it.
         </p>
       </div>
-      <div className="w-full md:w-1/2 rounded-2xl overflow-hidden">
+      <div className="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-lg">
         <img
           src="/lovable-uploads/photo-1721322800607-8c38375eef04"
-          alt="About Us"
-          className="w-full object-cover h-[400px]"
+          alt="Inviting living room representing Lenrubo’s premium lifestyle"
+          className="w-full object-cover h-[400px] aspect-[4/3] transition-transform duration-300 hover:scale-105"
         />
       </div>
     </div>

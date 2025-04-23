@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const products = [
   {
@@ -31,26 +32,28 @@ const FeaturedProducts = () => {
       <div className="container mx-auto">
         <div className="flex justify-between items-center mb-16">
           <h2 className="font-mono text-4xl md:text-6xl">FEATURED PRODUCTS</h2>
-          <Button variant="link" className="font-mono text-lg">
-            EXPLORE MORE
-          </Button>
+          <Link to="/products">
+            <Button variant="link" className="font-mono text-lg underline hover:no-underline">
+              Explore More
+            </Button>
+          </Link>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {products.map((product) => (
-            <div key={product.id} className="space-y-4">
-              <div className="aspect-[3/4] bg-gray-50 rounded-lg overflow-hidden">
+            <div key={product.id} className="space-y-4 group">
+              <div className="aspect-[3/4] bg-gray-50 rounded-lg overflow-hidden shadow-md">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <h3 className="font-mono text-center text-lg">{product.name}</h3>
               <p className="font-mono text-center text-gray-600">{product.description}</p>
               <p className="font-mono text-center font-bold">{product.price}</p>
               <div className="flex justify-center">
-                <Button className="font-mono bg-black hover:bg-gray-800 text-white">
-                  ADD TO CART
+                <Button className="font-mono bg-black hover:bg-gray-800 text-white shadow" aria-label={`Add ${product.name} to cart`}>
+                  Add to Cart
                 </Button>
               </div>
             </div>
