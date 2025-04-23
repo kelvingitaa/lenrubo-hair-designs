@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const products = [
@@ -28,33 +29,41 @@ const products = [
 
 const FeaturedProducts = () => {
   return (
-    <section className="py-24 px-4 bg-white">
+    <section className="py-24 px-4 bg-gray-50">
       <div className="container mx-auto">
-        <div className="flex justify-between items-center mb-16">
-          <h2 className="font-mono text-4xl md:text-6xl">FEATURED PRODUCTS</h2>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6">
+          <div>
+            <h2 className="font-mono text-sm uppercase tracking-widest text-gray-500 mb-3">Our Collections</h2>
+            <h3 className="font-instrument text-3xl md:text-5xl">Featured Products</h3>
+          </div>
           <Link to="/products">
-            <Button variant="link" className="font-mono text-lg underline hover:no-underline">
-              Explore More
+            <Button variant="link" className="font-mono text-sm text-black underline underline-offset-4 p-0 hover:text-gray-600 flex items-center">
+              View All Collections
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {products.map((product) => (
-            <div key={product.id} className="space-y-4 group">
-              <div className="aspect-[3/4] bg-gray-50 rounded-lg overflow-hidden shadow-md">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+            <div key={product.id} className="group">
+              <div className="aspect-[3/4] bg-white overflow-hidden mb-4">
+                <div className="h-full w-full overflow-hidden relative">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                </div>
               </div>
-              <h3 className="font-mono text-center text-lg">{product.name}</h3>
-              <p className="font-mono text-center text-gray-600">{product.description}</p>
-              <p className="font-mono text-center font-bold">{product.price}</p>
-              <div className="flex justify-center">
-                <Button className="font-mono bg-black hover:bg-gray-800 text-white shadow" aria-label={`Add ${product.name} to cart`}>
-                  Add to Cart
-                </Button>
+              <div className="space-y-2">
+                <h3 className="font-mono text-base">{product.name}</h3>
+                <p className="font-mono text-sm text-gray-500">{product.description}</p>
+                <p className="font-mono text-sm font-medium">{product.price}</p>
+                <div className="pt-2">
+                  <Button variant="outline" className="font-mono text-sm px-6 py-4 border-black text-black hover:bg-black hover:text-white rounded-none w-full" aria-label={`View ${product.name} details`}>
+                    View Details
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
